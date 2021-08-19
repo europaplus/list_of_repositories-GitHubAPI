@@ -39,7 +39,7 @@
 - Можно выравнивать по вертикали с помощью свойства vertical-align.
 
 ## Итого:
-![url](../../img/total_elements.png)
+![url](../../img/HTML_base/total_elements.png)
 ### Полезные ссылки:
 1. [Свойство box-sizing](https://developer.mozilla.org/ru/docs/Web/CSS/box-sizing)
 2. [Схлопывание внешних отступов margin collapsing](https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
