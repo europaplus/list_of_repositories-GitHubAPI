@@ -1,11 +1,11 @@
 # Блочные, строчные, блочно-строчные элементы
-[На главную](../../../README.md)<br>
-[Блочные, строчные, блочно-строчные элементы](./block_inline_inline-block.md)<br>
-[Единицы измерения](./units.md)<br>
-[Позиционирование](./position.md)<br>
-[Псевдоклассы и псевдоэлементы. Комбинаторы](./pseudo_classes_pseudo-elements_combinators.md)<br>
-[Специфичность селекторов](./specificity.md)<br>
-[Выравнивание](./specificity.md)<br>
+- :page_with_curl: [На главную](../../../README.md)<br>
+- :page_with_curl: [Блочные, строчные, блочно-строчные элементы](./block_inline_inline-block.md)<br>
+- :page_with_curl: [Единицы измерения](./units.md)<br>
+- :page_with_curl: [Позиционирование](./position.md)<br>
+- :page_with_curl: [Псевдоклассы и псевдоэлементы. Комбинаторы](./pseudo_classes_pseudo-elements_combinators.md)<br>
+- :page_with_curl: [Специфичность селекторов](./specificity.md)<br>
+- :page_with_curl: [Выравнивание](./specificity.md)<br>
 ---
 ## 1. Единицы измерения:
 - <b>px</b> - пиксели;
