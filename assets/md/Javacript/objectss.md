@@ -1,10 +1,11 @@
 # Объекты
-- :page_with_curl: [Типы данных. Преобразования типов. Сравнение](./assets/md/Javacript/data-types_comparison.md)<br>
-- :page_with_curl: [Переменные](./assets/md/Javacript/variables.md)<br>
-- :page_with_curl: [Объекты](./assets/md/Javacript/objectss.md)<br>
-- :page_with_curl: [Массивы](./assets/md/Javacript/arrays.md)<br>
-- :page_with_curl: [Функции. Контекст. Замыкания, каррирование](./assets/md/Javacript/functions_сontext_сarr_сlosures.md)<br>
-- :page_with_curl: [Отложенные действия. Промисы](./assets/md/Javacript/delayed-actions_promise.md)<br>
+- :page_with_curl: [На главную](../../../README.md)<br>
+- :page_with_curl: [Типы данных. Преобразования типов. Сравнение](.data-types_comparison.md)<br>
+- :page_with_curl: [Переменные](./variables.md)<br>
+- :page_with_curl: [Объекты](./objectss.md)<br>
+- :page_with_curl: [Массивы](./arrays.md)<br>
+- :page_with_curl: [Функции. Контекст. Замыкания, каррирование](./functions_сontext_сarr_сlosures.md)<br>
+- :page_with_curl: [Отложенные действия. Промисы](./delayed-actions_promise.md)<br>
 ---
 <b>Объект</b> - это набор свойств, которые представляют из себя пару - ключ и значение. По ключу можно обратиться к значению свойства объекта.
 Ключ свойства должен иметь тип string или другой тип, который можно преобразовать к string. Например, если задать свойство с ключом true типа boolean, то ключ будет преобразован в 'true' типа string. Значение свойства может иметь любой тип.
