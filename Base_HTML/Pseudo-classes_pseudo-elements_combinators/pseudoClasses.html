@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Base HTML</title>
+	<style>
+		body {
+			margin: 0;
+			font-size: 60px;
+			font-family: sans-serif;
+		}
+		div:first-of-type {
+			color: skyblue;
+		}
+		div:not(div:first-child) {
+			color: red;
+		}
+		button:hover {
+			opacity: 0.5;
+		}
+	</style>
+  </head>
+  <body>
+	  <section>
+		  <div>first</div>
+		  <div>nth(2)</div>
+		  <div>nth(3)</div>
+		  <div>nth(4)</div>
+		  <div>last</div>
+	  </section>
+	  <button>click me</button>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Base HTML</title>
+	<style>
+		body {
+			margin: 0;
+			font-size: 60px;
+			font-family: sans-serif;
+		}
+		div {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			background-color: white;
+			border: 50px red solid;
+			position: relative;
+		}
+		div::after {
+			content: '';
+			position: absolute;
+			border-top: 150px solid red;
+			border-right: 70px solid transparent;
+			bottom: -5px;
+			right: 5px;
+			transform: translate(50%, 100%) rotate(5deg);
+		}
+	</style>
+  </head>
+  <body>
+	  <div></div>
+  </body>
+</html>

@@ -1,2 +1,5 @@
-# list_of_repositories-GitHubAPI
-Тренировочные проект (SPA) по взаимодействию с GitHubAPI, также присутствует теоретический материал. Стек: TypeScript/React/Redux.
+# Тренировочные проект (SPA) по взаимодействию с GitHubAPI
+
+## Навигация
+
+- :page_with_curl: [Основы вёрстки](./assets/md/block_inline_inline-block.md)

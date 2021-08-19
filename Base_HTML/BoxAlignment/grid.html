@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Base HTML</title>
+	<style>
+		body {
+			margin: 0;
+			font-size: 60px;
+			font-family: sans-serif;
+		}
+		.grid {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			grid-template-rows: 300px 300px;
+			/* grid-gap: 20px; */
+			grid-column-gap: 50px;
+			grid-row-gap: 100px;
+		}
+		.item {
+			background: skyblue;
+		}
+		.item:last-child {
+			grid-column-start: 1;
+			grid-row-start: 1;
+		}
+		.item_nested-grid {
+			display: grid;
+			grid-template-areas: "a a a"
+			"b . ."
+			"b . c";
+		}
+		.item_nested-grid > div {
+			background: orange;
+		}
+		.a {
+			grid-area: a;
+		}
+		.b {
+			grid-area: b;
+		}
+		.c {
+			grid-area: c;
+		}
+	</style>
+  </head>
+  <body>
+	  <div class="grid">
+		  <div class="item">1</div>
+		  <div class="item">2</div>
+		  <div class="item">3</div>
+		  <div class="item item_nested-grid">
+			  <div class="a">a</div>
+			  <div class="b">b</div>
+			  <div class="c">c</div>
+		  </div>
+	  </div>
+  </body>
+</html>

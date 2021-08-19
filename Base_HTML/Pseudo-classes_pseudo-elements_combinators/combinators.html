@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Base HTML</title>
+	<style>
+		body {
+			margin: 0;
+			font-size: 60px;
+			font-family: sans-serif;
+		}
+		.parent {
+			width: 50vw;
+			height: 50vh;
+			border: 10px solid black;
+		}
+		div {
+			color: black;
+		}
+		.child_first + .child {
+			color: skyblue;
+		}
+	</style>
+  </head>
+  <body>
+	  <div class="parent">
+		  <div class="child child_first">1</div>
+		  <div class="child">
+			  2
+			  <div class="child child_nested">3</div>
+		  </div>
+		  <div class="child">4</div>
+		  <div class="child child_last">5</div>
+	  </div>
+  </body>
+</html>
