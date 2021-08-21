@@ -24,3 +24,9 @@
 - :page_with_curl: [Знакомство с TypeScript](./assets/md/TypeScript/introducing_typescript.md)<br>
 - :page_with_curl: [Создание своих типов и манипуляции с ними](./assets/md/TypeScript/create_own_types.md)<br>
 - :page_with_curl: [Интерфейсы. Их взаимодействие с классами. Шаблонизация](./assets/md/TypeScript/interfaces_templating.md)<br>
+
+## Знакомство с CRA:
+
+- :page_with_curl: [Создаем проект с помощью CRA](./assets/md/CRA/create_project_CRA.md)<br>
+- :page_with_curl: [Интерфейсы. Их взаимодействие с классами. Шаблонизация](./assets/md/CRA/package_managers.md)<br>
+---
