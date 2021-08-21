@@ -5,13 +5,10 @@
  * Или не меняйте, если делаете запрос за списком репоизториев для организации)
  * Выберите любой запрос из публичного API GitHub.
  */
+import {ApiResponse} from "../../shared/store/types";
 
 export type GetOrganizationReposListParams = {
-
-}
-
-export type ApiResp<T> = {
-
+    organizationName: string,
 }
 
 export type RepoItem = {
@@ -19,5 +16,5 @@ export type RepoItem = {
 }
 
 export interface IGitHubStore {
-    getOrganizationReposList(params: GetOrganizationReposListParams): Promise<ApiResp<RepoItem[]>>;
+    getOrganizationReposList(params: GetOrganizationReposListParams): Promise<ApiResponse<RepoItem[], any>>;
 }

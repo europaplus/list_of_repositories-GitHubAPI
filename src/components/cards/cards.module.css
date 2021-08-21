@@ -1,0 +1,44 @@
+.grid {
+    display: grid;
+    margin-top: 10px;
+    grid-gap: 10px;
+    justify-content: center;
+}
+div.item {
+    height: 104px;
+    width: 357px;
+    padding: 20px;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid #D9D9D9;
+}
+div.content {
+    display: flex;
+}
+div.content1 {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    background: #FF5555;
+    border-radius: 40px;
+    margin-right: 5px;
+}
+div.content1 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+div.content1 img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.default__avatar {
+    font-weight: bold;
+    color: white;
+    margin: auto;
+    font-size: 40px;
+    line-height: 47px;
+}
