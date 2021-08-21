@@ -11,6 +11,19 @@ export type GetOrganizationReposListParams = {
     organizationName: string,
 }
 
+type listArray = {
+    id: number,
+    node_id: 'string',
+    name: 'string',
+    full_name: 'string',
+    private: boolean,
+}
+
+type GetSomeDataParams = {
+    name_org: 'string',
+    data: listArray[],
+}
+
 export type RepoItem = {
 
 }

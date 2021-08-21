@@ -3,17 +3,21 @@
     margin-top: 10px;
     justify-content: center;
 }
+
 .search {
     display: flex;
     justify-content: center;
     grid-area: a;
 }
+
 .search input {
     height: 50px;
     width: 295px;
+    background: #FFFFFF;
     border-radius: 6px;
     border: 1px solid #D9D9D9;
 }
+
 .search button {
     margin-left: 10px;
     height: 50px;
@@ -22,7 +26,27 @@
     border-radius: 6px;
     border: none;
 }
+
 img {
     height: 17px;
     width: 17px;
+}
+
+input:focus {
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid #FF5555;
+}
+
+input:disabled {
+    border: 1px solid #D9D9D9;
+    background: #F9F9F9;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+button:disabled {
+    background: #D9D9D9;
 }

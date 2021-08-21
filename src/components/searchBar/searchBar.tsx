@@ -12,7 +12,7 @@ const SearchBar: React.FC = () => {
     return (
         <div className={styled.grid}>
             <form action="" className={styled.search}>
-                <input type="search" placeholder="Введите название организации"/>
+                <input className={styled.inp} type="search" placeholder="Введите название организации"/>
                 <button onClick={clickHandle} type="submit">
                     <img className="is" src={search} alt="icon search"/>
                 </button>
