@@ -1,6 +1,6 @@
 # Объекты
 - :page_with_curl: [На главную](../../../README.md)<br>
-- :page_with_curl: [Типы данных. Преобразования типов. Сравнение](.data-types_comparison.md)<br>
+- :page_with_curl: [Типы данных. Преобразования типов. Сравнение](./data-types_comparison.md)<br>
 - :page_with_curl: [Переменные](./variables.md)<br>
 - :page_with_curl: [Объекты](./objectss.md)<br>
 - :page_with_curl: [Массивы](./arrays.md)<br>
