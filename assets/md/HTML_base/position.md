@@ -5,7 +5,7 @@
 - :page_with_curl: [Позиционирование](./position.md)<br>
 - :page_with_curl: [Псевдоклассы и псевдоэлементы. Комбинаторы](./pseudo_classes_pseudo-elements_combinators.md)<br>
 - :page_with_curl: [Специфичность селекторов](./specificity.md)<br>
-- :page_with_curl: [Выравнивание](./position.md)<br>
+- :page_with_curl: [Выравнивание](./alignment.md)<br>
 ---
 ### 1. Позиционирование:
 - <b>static</b> - дефолтное значение. Элементы на странице располагаются в нормальном порядке. Свойства смещения top/left/right/bottom не применяются;
