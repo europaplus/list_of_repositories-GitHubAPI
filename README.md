@@ -18,3 +18,9 @@
 - :page_with_curl: [Массивы](./assets/md/Javacript/arrays.md)<br>
 - :page_with_curl: [Функции. Контекст. Замыкания, каррирование](./assets/md/Javacript/functions_сontext_сarr_сlosures.md)<br>
 - :page_with_curl: [Отложенные действия. Промисы](./assets/md/Javacript/delayed-actions_promise.md)<br>
+
+## TypeScript:
+
+- :page_with_curl: [Знакомство с TypeScript](./assets/md/TypeScript/introducing_typescript.md)<br>
+- :page_with_curl: [Создание своих типов и манипуляции с ними](./assets/md/TypeScript/create_own_types.md)<br>
+- :page_with_curl: [Интерфейсы. Их взаимодействие с классами. Шаблонизация](./assets/md/TypeScript/interfaces_templating.md)<br>
