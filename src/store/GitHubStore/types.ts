@@ -11,21 +11,17 @@ export type GetOrganizationReposListParams = {
     organizationName: string,
 }
 
-type listArray = {
-    id: number,
-    node_id: 'string',
-    name: 'string',
-    full_name: 'string',
-    private: boolean,
-}
-
 type GetSomeDataParams = {
-    name_org: 'string',
-    data: listArray[],
+    name_org: string,
+    data: RepoItem[],
 }
 
 export type RepoItem = {
-
+    id: number,
+    node_id: string,
+    name: string,
+    full_name: string,
+    private: boolean,
 }
 
 export interface IGitHubStore {
