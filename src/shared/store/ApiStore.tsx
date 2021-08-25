@@ -18,7 +18,11 @@ export default class ApiStore implements IApiStore {
                 status: response.status,
             }
         } catch (error) {
-            throw new Error(error);
+            return {
+                success: error.success,
+                data: error.data,
+                status: error.status,
+            }
         }
     }
 }
