@@ -12,7 +12,7 @@ export default class GitHubStore implements IGitHubStore {
             headers: {
                 Accept: "application/vnd.github.v3+json"
             },
-            data: null,
+            data: {},
         });
     }
 }

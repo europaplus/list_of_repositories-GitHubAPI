@@ -11,17 +11,23 @@ export type GetOrganizationReposListParams = {
     organizationName: string,
 }
 
-type GetSomeDataParams = {
-    name_org: string,
-    data: RepoItem[],
+export type gitHubRepoOwner = {
+    id: number,
+    url: string,
+    avatar_url: string,
+    login: string,
 }
+
+// type GetSomeDataParams = {
+//     name_org: string,
+//     data: RepoItem[],
+// }
 
 export type RepoItem = {
     id: number,
-    node_id: string,
+    url: string,
     name: string,
-    full_name: string,
-    private: boolean,
+    stargazers_count: number,
 }
 
 export interface IGitHubStore {

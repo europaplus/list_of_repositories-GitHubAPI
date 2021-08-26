@@ -7,7 +7,13 @@ const SearchBar: React.FC = () => {
     function clickHandle(e: FormEvent): void {
         e.preventDefault();
         requestTesting()
-            .then(res => console.log(res));
+            .then(res => {
+                if (res.success) {
+                    console.log(res.data.map(repo => {
+                        return repo.name;
+                    }));
+                }
+            });
     }
 
     return (
