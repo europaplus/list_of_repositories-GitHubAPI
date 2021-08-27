@@ -1,0 +1,72 @@
+.card {
+    display: flex;
+    align-items: center;
+    height: 104px;
+    width: 357px;
+    border-radius: 6px;
+    border: 1px solid #D9D9D9;
+}
+.card__defaultAvatar {
+    position: relative;
+    height: 80px;
+    margin-left: 20px;
+    width: 80px;
+    background: #FF5555;
+    border-radius: 40px;
+    margin-right: 5px;
+}
+.card__literal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: white;
+    font-size: 40px;
+    line-height: 47px;
+}
+.card__info {
+    display: flex;
+}
+.card__info .card__star {
+    margin-right: 4px;
+}
+.card__info .card__date {
+    margin-left: 15px;
+}
+.card__reponame {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 2px;
+}
+.card__orgname {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 4px;
+    text-decoration: none;
+    color: #7E7E7E;
+}
+
+.card__star {
+    display: block;
+    height: 12px;
+    width: 12px;
+    vertical-align: middle;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
+}
+
+.card__orgname:hover {
+    color: #208FBF;
+}
