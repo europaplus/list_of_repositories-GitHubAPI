@@ -1,35 +1,30 @@
 /** Интерфейс класса для работы с GitHub API
  * названия getOrganizationReposList
  * (а также типов GetOrganizationReposListParams и RepoItem)
- * поменяйте в соответствии с выполняемым запросом.
- * Или не меняйте, если делаете запрос за списком репоизториев для организации)
- * Выберите любой запрос из публичного API GitHub.
  */
-import {ApiResponse} from "../../shared/store/types";
+import { ApiResponse } from "../../shared/store/types";
 
 export type GetOrganizationReposListParams = {
-    organizationName: string,
-}
+  organizationName: string;
+};
 
 export type gitHubRepoOwner = {
-    id: number,
-    url: string,
-    avatar_url: string,
-    login: string,
-}
-
-// type GetSomeDataParams = {
-//     name_org: string,
-//     data: RepoItem[],
-// }
+  id: number;
+  url: string;
+  avatar_url: string;
+  login: string;
+};
 
 export type RepoItem = {
-    id: number,
-    url: string,
-    name: string,
-    stargazers_count: number,
-}
+  id: number;
+  full_name: string;
+  owner: gitHubRepoOwner;
+  stargazers_count: number;
+  updated_at: string;
+};
 
 export interface IGitHubStore {
-    getOrganizationReposList(params: GetOrganizationReposListParams): Promise<ApiResponse<RepoItem[], any>>;
+  getOrganizationReposList(
+    params: GetOrganizationReposListParams
+  ): Promise<ApiResponse<RepoItem[], any>>;
 }

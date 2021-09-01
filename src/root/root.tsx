@@ -1,14 +1,12 @@
 // Здесь необходимо продемонстрировать создание и использование GitHubStore
-import GitHubStore from '../store/GitHubStore/GitHubStore';
+import GitHubStore from "../store/GitHubStore/GitHubStore";
 
-const requestTesting = async () => {
-    const gitHubStore = new GitHubStore();
-    const EXAMPLE_ORGANIZATION = 'ktsstudio';
+const requestTesting = async (organizationName: string) => {
+  const gitHubStore = new GitHubStore();
 
-    return await gitHubStore.getOrganizationReposList({
-        organizationName: EXAMPLE_ORGANIZATION
-    });
-}
+  return await gitHubStore.getOrganizationReposList({
+    organizationName: organizationName,
+  });
+};
 
 export default requestTesting;
-// В ДЗ 1 Не требуется визуально в разметке отображать результат запроса к сети. Достаточно вывести в console.log
