@@ -21,6 +21,7 @@ export type RepoItem = {
   owner: gitHubRepoOwner;
   stargazers_count: number;
   updated_at: string;
+  name: string;
 };
 
 export interface IGitHubStore {

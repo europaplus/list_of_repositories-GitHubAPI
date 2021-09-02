@@ -3,7 +3,7 @@ import React, { FormEvent } from "react";
 import styles from "./button.module.css";
 
 type ButtonProps = {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   onClick: () => void;
   disabled: boolean;
 };

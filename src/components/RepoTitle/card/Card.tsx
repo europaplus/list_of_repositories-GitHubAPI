@@ -1,16 +1,17 @@
-import React from "react";
+import React, { FormEvent } from "react";
 
 import Avatar from "@components/Avatar";
 import StarIcon from "@components/StarIcon";
 
-import { RepoItem } from "../../../../../../store/GitHubStore/types";
+import { RepoItem } from "../../../store/GitHubStore/types";
 import styles from "./card.module.css";
 
 type CardProps = {
   repoItem: RepoItem;
+  onClick: () => void;
 };
 
-const Card: React.FC<CardProps> = ({ repoItem }) => {
+const Card: React.FC<CardProps> = ({ repoItem, onClick }) => {
   const truncString = (str: string) => {
     if (str.length > 30) {
       return str.substring(0, 27) + "...";
@@ -27,8 +28,13 @@ const Card: React.FC<CardProps> = ({ repoItem }) => {
   };
 
   return (
-    <div className={styles.card}>
-      <Avatar repoItem={repoItem} alt="avatar" />
+    <div className={styles.card} onClick={onClick}>
+      <Avatar
+        repoItem={repoItem}
+        alt="avatar"
+        src={repoItem.owner.avatar_url}
+        letter={repoItem.name.charAt(0).toUpperCase()}
+      />
       <div>
         <div className={styles.card__reponame}>
           {truncString(repoItem.full_name)}

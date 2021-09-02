@@ -2,11 +2,11 @@ import React, { FormEvent, useState } from "react";
 
 import Button from "@components/Button";
 import Input from "@components/Input";
+import RepoTile from "@components/RepoTitle";
 import SearchIcon from "@components/SearchIcon";
 
 import requestTesting from "../../../root/root";
 import { RepoItem } from "../../../store/GitHubStore/types";
-import CardsList from "./components/cardsList";
 import styles from "./reposSearchPage.module.css";
 
 const ReposSearchPage: React.FC = () => {
@@ -29,6 +29,7 @@ const ReposSearchPage: React.FC = () => {
       }
     });
   };
+
   return (
     <>
       <div className={styles.search__form}>
@@ -41,7 +42,7 @@ const ReposSearchPage: React.FC = () => {
           <SearchIcon currentColor="white" />
         </Button>
       </div>
-      <CardsList listRepositories={listRepositories} />
+      <RepoTile RepoItem={listRepositories} />
     </>
   );
 };
