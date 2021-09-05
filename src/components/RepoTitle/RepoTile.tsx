@@ -1,4 +1,4 @@
-import React, { FormEvent } from "react";
+import React from "react";
 
 import { RepoItem } from "../../store/GitHubStore/types";
 import Card from "./card";
@@ -6,19 +6,15 @@ import styles from "./RepoTile.module.css";
 
 export type RepoTileProps = {
   RepoItem: RepoItem[];
+  onClick: (item: RepoItem) => void;
 };
 
-const RepoTile: React.FC<RepoTileProps> = ({ RepoItem }) => {
-  const [indexCard, setIndexCard] = React.useState<RepoItem | null>(null);
-
+const RepoTile: React.FC<RepoTileProps> = ({ RepoItem, onClick }) => {
   return (
     <div className={styles.cards__item}>
       {RepoItem.map((item) => {
-        const handleOnClickCard = () => {
-          setIndexCard(item);
-        };
         return (
-          <Card key={item.id} repoItem={item} onClick={handleOnClickCard} />
+          <Card key={item.id} repoItem={item} onClick={() => onClick(item)} />
         );
       })}
     </div>

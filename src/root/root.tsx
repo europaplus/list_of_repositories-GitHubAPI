@@ -1,7 +1,7 @@
 // Здесь необходимо продемонстрировать создание и использование GitHubStore
 import GitHubStore from "../store/GitHubStore/GitHubStore";
 
-const requestTesting = async (organizationName: string) => {
+const getOrgRepos = async (organizationName: string) => {
   const gitHubStore = new GitHubStore();
 
   return await gitHubStore.getOrganizationReposList({
@@ -9,4 +9,13 @@ const requestTesting = async (organizationName: string) => {
   });
 };
 
-export default requestTesting;
+const getRepoBranches = async (nameRepo: string, nameOrg: string) => {
+  const gitHubStore = new GitHubStore();
+
+  return await gitHubStore.getReposBranches({
+    nameOrg,
+    nameRepo,
+  });
+};
+
+export { getOrgRepos, getRepoBranches };

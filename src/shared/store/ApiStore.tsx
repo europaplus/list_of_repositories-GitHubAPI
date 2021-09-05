@@ -39,7 +39,6 @@ export default class ApiStore implements IApiStore {
     try {
       const response = await fetch(...this.getRequestData(params));
       const data = await response.json();
-      console.log(data);
       return {
         success: response.ok,
         data: data,

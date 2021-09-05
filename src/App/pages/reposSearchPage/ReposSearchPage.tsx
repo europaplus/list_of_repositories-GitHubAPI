@@ -2,10 +2,11 @@ import React, { FormEvent, useState } from "react";
 
 import Button from "@components/Button";
 import Input from "@components/Input";
+import RepoBranchesDrawer from "@components/RepoBranchesDrawer";
 import RepoTile from "@components/RepoTitle";
 import SearchIcon from "@components/SearchIcon";
 
-import requestTesting from "../../../root/root";
+import { getOrgRepos } from "../../../root/root";
 import { RepoItem } from "../../../store/GitHubStore/types";
 import styles from "./reposSearchPage.module.css";
 
@@ -13,13 +14,21 @@ const ReposSearchPage: React.FC = () => {
   const [isLoading, setLoading] = useState<boolean>(false);
   const [listRepositories, setListRepositories] = useState<RepoItem[]>([]);
   const [searchValue, setSearchValue] = useState<string>("");
+  const [isDrawer, setDrawer] = useState<boolean>(false);
+  const [indexCard, setIndexCard] = React.useState<RepoItem | null>(null);
+
+  const handleOnClickCard = (item: RepoItem) => {
+    setIndexCard(item);
+    setDrawer(true);
+  };
 
   const handleOnChange = (e: FormEvent) => {
     setSearchValue((e.target as HTMLInputElement).value);
   };
+
   const handleOnCLick = () => {
     setLoading((prev) => !prev);
-    requestTesting(searchValue).then((res) => {
+    getOrgRepos(searchValue).then((res) => {
       if (res.success) {
         setLoading((prev) => !prev);
         setListRepositories(res.data);
@@ -29,7 +38,9 @@ const ReposSearchPage: React.FC = () => {
       }
     });
   };
-
+  const handleOnClose = () => {
+    setDrawer(false);
+  };
   return (
     <>
       <div className={styles.search__form}>
@@ -42,7 +53,12 @@ const ReposSearchPage: React.FC = () => {
           <SearchIcon currentColor="white" />
         </Button>
       </div>
-      <RepoTile RepoItem={listRepositories} />
+      <RepoTile RepoItem={listRepositories} onClick={handleOnClickCard} />
+      <RepoBranchesDrawer
+        selectedRepo={indexCard}
+        isDrawer={isDrawer}
+        onClose={handleOnClose}
+      />
     </>
   );
 };
