@@ -20,12 +20,7 @@ const Card: React.FC<CardProps> = ({ repoItem, onClick }) => {
     }
   };
 
-  const getDate = (updateAt: string) => {
-    const date = new Date(updateAt);
-    return `${date.getDate()} ${date.toLocaleString("default", {
-      month: "long",
-    })}`;
-  };
+  const date = new Date(repoItem.updated_at);
 
   return (
     <div className={styles.card} onClick={onClick}>
@@ -43,10 +38,13 @@ const Card: React.FC<CardProps> = ({ repoItem, onClick }) => {
           {truncString(repoItem.owner.login)}
         </a>
         <div className={styles.card__info}>
-          <StarIcon currentColor="#FF9432" />
+          <StarIcon />
           <div>{repoItem.stargazers_count}</div>
           <div className={styles.card__date}>
-            Update {getDate(repoItem.updated_at)}
+            Update{" "}
+            {`${date.getDate()} ${date.toLocaleString("default", {
+              month: "long",
+            })}`}
           </div>
         </div>
       </div>
@@ -54,4 +52,4 @@ const Card: React.FC<CardProps> = ({ repoItem, onClick }) => {
   );
 };
 
-export default Card;
+export default React.memo(Card);

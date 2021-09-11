@@ -9,7 +9,7 @@
 .search__input:focus {
     border-radius: 6px;
     outline: none;
-    border: 1px solid #FF5555;
+    border: 1px solid var(--bg-color);
 }
 
 .search__input:disabled {

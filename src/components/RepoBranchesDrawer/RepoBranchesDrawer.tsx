@@ -6,7 +6,7 @@ import { getRepoBranches } from "../../root/root";
 import { BrancheList, RepoItem } from "../../store/GitHubStore/types";
 
 type RepoBranchesDrawerProps = {
-  selectedRepo: RepoItem | null;
+  selectedRepo: RepoItem;
   isDrawer: boolean;
   onClose: () => void;
 };
@@ -16,32 +16,34 @@ const RepoBranchesDrawer: React.FC<RepoBranchesDrawerProps> = ({
   isDrawer,
   selectedRepo,
 }) => {
-  const [branchList, setBranchList] = useState<[] | BrancheList[]>([]);
+  const [branchList, setBranchList] = useState<BrancheList[]>([]);
+
+  const getRepoBranchesWrapper = async () => {
+    return await getRepoBranches(selectedRepo.name, selectedRepo.owner.login);
+  };
+
   React.useEffect(() => {
     if (selectedRepo) {
-      getRepoBranches(selectedRepo.name, selectedRepo.owner.login).then(
-        (res) => {
-          if (res.success) {
-            setBranchList(res.data);
-          } else {
-            setBranchList([{ name: "Веток не найдено" }]);
-          }
+      getRepoBranchesWrapper().then((res) => {
+        if (res.success) {
+          setBranchList(res.data);
         }
-      );
+      });
     }
   }, [selectedRepo]);
   return (
     <Drawer
-      title={`Branches`}
+      title={"Branches"}
       placement="right"
       visible={isDrawer}
       onClose={onClose}
     >
+      {!branchList.length && "Веток не найдено"}
       {branchList.map((item, index) => {
-        return <p key={index}>{`${index + 1}. ${item.name}`}</p>;
+        return <p key={item.name}>{`${index + 1}. ${item.name}`}</p>;
       })}
     </Drawer>
   );
 };
 
-export default RepoBranchesDrawer;
+export default React.memo(RepoBranchesDrawer);

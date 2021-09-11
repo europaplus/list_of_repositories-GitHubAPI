@@ -4,15 +4,15 @@ import { RepoItem } from "../../store/GitHubStore/types";
 import Card from "./card";
 import styles from "./RepoTile.module.css";
 
-export type RepoTileProps = {
-  RepoItem: RepoItem[];
+export type OutputReposListProps = {
+  list: RepoItem[];
   onClick: (item: RepoItem) => void;
 };
 
-const RepoTile: React.FC<RepoTileProps> = ({ RepoItem, onClick }) => {
+const OutputReposList: React.FC<OutputReposListProps> = ({ list, onClick }) => {
   return (
     <div className={styles.cards__item}>
-      {RepoItem.map((item) => {
+      {list.map((item) => {
         return (
           <Card key={item.id} repoItem={item} onClick={() => onClick(item)} />
         );
@@ -21,4 +21,4 @@ const RepoTile: React.FC<RepoTileProps> = ({ RepoItem, onClick }) => {
   );
 };
 
-export default RepoTile;
+export default React.memo(OutputReposList);

@@ -3,18 +3,7 @@
     height: 80px;
     margin-left: 20px;
     width: 80px;
-    background: #FF5555;
+    background: var(--bg-color);
     border-radius: 40px;
     margin-right: 5px;
 }
-/*default img*/
-/*.card__literal {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*    font-weight: bold;*/
-/*    color: white;*/
-/*    font-size: 40px;*/
-/*    line-height: 47px;*/
-/*}*/
