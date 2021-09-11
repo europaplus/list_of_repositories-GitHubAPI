@@ -1,5 +1,6 @@
 # Тренировочные проект (SPA) по взаимодействию с GitHubAPI
 
+
 ## Основы верстки:
 
 - :page_with_curl: [Блочные, строчные, блочно-строчные элементы](assets/md/HTML_base/block_inline_inline-block.md)
