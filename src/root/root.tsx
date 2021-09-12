@@ -9,13 +9,10 @@ const getOrgRepos = async (organizationName: string) => {
   });
 };
 
-const getRepoBranches = async (nameRepo: string, nameOrg: string) => {
+const getRepoBranches = async (id: string) => {
   const gitHubStore = new GitHubStore();
 
-  return await gitHubStore.getReposBranches({
-    nameOrg,
-    nameRepo,
-  });
+  return await gitHubStore.getReposBranches(id);
 };
 
 export { getOrgRepos, getRepoBranches };

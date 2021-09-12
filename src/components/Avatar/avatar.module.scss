@@ -1,9 +1,11 @@
+@import '../../variables';
+
 .card__avatar {
     position: relative;
     height: 80px;
     margin-left: 20px;
     width: 80px;
-    background: var(--bg-color);
+    background: $red-color;
     border-radius: 40px;
     margin-right: 5px;
 }

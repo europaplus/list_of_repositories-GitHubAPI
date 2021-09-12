@@ -24,11 +24,6 @@ export type RepoItem = {
   name: string;
 };
 
-export type GetBranches = {
-  nameOrg: string;
-  nameRepo: string;
-};
-
 export type BrancheList = {
   name: string;
 };
@@ -37,5 +32,5 @@ export interface IGitHubStore {
   getOrganizationReposList(
     params: GetOrganizationReposListParams
   ): Promise<ApiResponse<RepoItem[], any>>;
-  getReposBranches(params: GetBranches): Promise<ApiResponse<RepoItem[], any>>;
+  getReposBranches(id: string): Promise<ApiResponse<RepoItem[], any>>;
 }

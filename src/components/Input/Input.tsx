@@ -1,6 +1,6 @@
-import React, { FormEvent } from "react";
+import React from "react";
 
-import styles from "./input.module.css";
+import styles from "./input.module.scss";
 
 export type InputProps = {
   name: string;

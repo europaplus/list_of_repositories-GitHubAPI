@@ -1,18 +1,20 @@
-import React, { FormEvent } from "react";
+import React, { useContext } from "react";
 
-import styles from "./button.module.css";
+import styles from "./button.module.scss";
+import { ReposContext } from "../../App/pages/reposSearchPage";
 
 type ButtonProps = {
   children: React.ReactNode;
   onClick: () => void;
-  disabled: boolean;
 };
 
-const Button: React.FC<ButtonProps> = ({ children, onClick, disabled }) => {
+const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
+  const reposContext = useContext(ReposContext);
+
   return (
     <button
       onClick={onClick}
-      disabled={disabled}
+      disabled={reposContext.isLoading}
       className={styles.search__button}
     >
       {children}

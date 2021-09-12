@@ -1,10 +1,10 @@
-import React, { FormEvent } from "react";
+import React from "react";
 
 import Avatar from "@components/Avatar";
 import StarIcon from "@components/StarIcon";
 
 import { RepoItem } from "../../../store/GitHubStore/types";
-import styles from "./card.module.css";
+import styles from "./card.module.scss";
 
 type CardProps = {
   repoItem: RepoItem;
@@ -34,9 +34,9 @@ const Card: React.FC<CardProps> = ({ repoItem, onClick }) => {
         <div className={styles.card__reponame}>
           {truncString(repoItem.full_name)}
         </div>
-        <a href="#" className={styles.card__orgname}>
+        <div className={styles.card__orgname}>
           {truncString(repoItem.owner.login)}
-        </a>
+        </div>
         <div className={styles.card__info}>
           <StarIcon />
           <div>{repoItem.stargazers_count}</div>

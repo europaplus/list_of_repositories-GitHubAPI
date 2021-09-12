@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { Link } from "react-router-dom";
 
 import { RepoItem } from "../../store/GitHubStore/types";
 import Card from "./card";
-import styles from "./RepoTile.module.css";
+import styles from "./RepoTile.module.scss";
+import { ReposContext } from "../../App/pages/reposSearchPage";
 
 export type OutputReposListProps = {
-  list: RepoItem[];
   onClick: (item: RepoItem) => void;
 };
 
-const OutputReposList: React.FC<OutputReposListProps> = ({ list, onClick }) => {
+const OutputReposList: React.FC<OutputReposListProps> = ({ onClick }) => {
+  const reposContext = useContext(ReposContext);
   return (
     <div className={styles.cards__item}>
-      {list.map((item) => {
+      {reposContext.listRepositories.map((item) => {
         return (
-          <Card key={item.id} repoItem={item} onClick={() => onClick(item)} />
+          <Link to={`/repos/${item.id}`} key={item.id}>
+            <Card repoItem={item} onClick={() => onClick(item)} />
+          </Link>
         );
       })}
     </div>

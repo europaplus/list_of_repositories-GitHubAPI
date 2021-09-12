@@ -1,12 +1,12 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 
 import { Drawer } from "antd";
 
 import { getRepoBranches } from "../../root/root";
-import { BrancheList, RepoItem } from "../../store/GitHubStore/types";
+import { BrancheList } from "../../store/GitHubStore/types";
 
 type RepoBranchesDrawerProps = {
-  selectedRepo: RepoItem;
   isDrawer: boolean;
   onClose: () => void;
 };
@@ -14,23 +14,22 @@ type RepoBranchesDrawerProps = {
 const RepoBranchesDrawer: React.FC<RepoBranchesDrawerProps> = ({
   onClose,
   isDrawer,
-  selectedRepo,
 }) => {
   const [branchList, setBranchList] = useState<BrancheList[]>([]);
+  let { id } = useParams<{ id: string }>();
 
   const getRepoBranchesWrapper = async () => {
-    return await getRepoBranches(selectedRepo.name, selectedRepo.owner.login);
+    return await getRepoBranches(id);
   };
 
   React.useEffect(() => {
-    if (selectedRepo) {
-      getRepoBranchesWrapper().then((res) => {
-        if (res.success) {
-          setBranchList(res.data);
-        }
-      });
-    }
-  }, [selectedRepo]);
+    getRepoBranchesWrapper().then((res) => {
+      if (res.success) {
+        setBranchList(res.data);
+      }
+    });
+  }, [id]);
+
   return (
     <Drawer
       title={"Branches"}
