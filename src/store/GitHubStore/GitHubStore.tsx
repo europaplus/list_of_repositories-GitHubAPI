@@ -4,7 +4,6 @@ import {
   GetOrganizationReposListParams,
   RepoItem,
   IGitHubStore,
-  GetBranches,
 } from "./types";
 
 export default class GitHubStore implements IGitHubStore {
@@ -21,10 +20,10 @@ export default class GitHubStore implements IGitHubStore {
       data: {},
     });
   }
-  getReposBranches(params: GetBranches): Promise<ApiResponse<RepoItem[], any>> {
+  getReposBranches(id: string): Promise<ApiResponse<RepoItem[], any>> {
     return this.apiStore.request({
       method: HTTPMethod.GET,
-      endpoint: `repos/${params.nameOrg}/${params.nameRepo}/branches`,
+      endpoint: `repositories/${id}/branches`,
       headers: {
         Accept: "application/vnd.github.v3+json",
       },

@@ -1,0 +1,21 @@
+@import '../../variables';
+
+.search {
+    &__input {
+        height: 50px;
+        width: 295px;
+        background: #FFFFFF;
+        border-radius: 6px;
+        border: 1px solid #D9D9D9;
+    }
+    &__input:focus {
+        border-radius: 6px;
+        outline: none;
+        border: 1px solid $red-color;
+    }
+    &__input:disabled {
+        border: 1px solid #D9D9D9;
+        background: #F9F9F9;
+    }
+
+}

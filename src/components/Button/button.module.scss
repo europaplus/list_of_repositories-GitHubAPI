@@ -1,0 +1,17 @@
+.search {
+    &__button {
+        margin-left: 10px;
+        height: 50px;
+        width: 50px;
+        background: rgba(255, 85, 85, 1);
+        border-radius: 6px;
+        border: none;
+    }
+    &__button:hover {
+        opacity: 0.7;
+
+    }
+    &__button:disabled {
+        background: #D9D9D9;
+    }
+}

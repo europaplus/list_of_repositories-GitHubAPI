@@ -1,7 +1,7 @@
 import React from "react";
 
 import { RepoItem } from "../../store/GitHubStore/types";
-import styles from "./avatar.module.css";
+import styles from "./avatar.module.scss";
 
 type AvatarProps = {
   repoItem: RepoItem;

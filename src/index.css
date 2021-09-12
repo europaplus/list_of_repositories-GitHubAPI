@@ -22,7 +22,3 @@ code {
 * {
   box-sizing: border-box;
 }
-
-element {
-  --bg-color: #FF5555;
-}
